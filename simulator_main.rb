@@ -3,7 +3,7 @@
 require_relative 'simulator_workflow'
 
 def main
-  SimulatorWorkflow.run
+  SimulatorWorkflow.show_simulators
 end
 
 main

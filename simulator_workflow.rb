@@ -10,7 +10,7 @@ class SimulatorWorkflow
     json[:devices]
   end
 
-  def self.create_simulators(devices)
+  def self.create_script_filter_items(devices)
     ios_simulator_keys = devices.keys.select { |key| key.to_s.include?('iOS') }
     ios_simulators = []
     ios_simulator_keys.reverse_each do |key|
@@ -27,12 +27,8 @@ class SimulatorWorkflow
 
   def self.show_simulators
     export_json = {
-      'items' => create_simulators(device_list)
+      'items' => create_script_filter_items(device_list)
     }.to_json
     puts export_json
-  end
-
-  def self.run
-    show_simulators
   end
 end
