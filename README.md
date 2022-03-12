@@ -38,4 +38,4 @@ https://user-images.githubusercontent.com/43805056/157847501-417effce-0b69-4702-
 
 ## License
 
-This project is published under the MIT License.
+This project is published under [the MIT License](https://github.com/yamatatsu10969/alfred-workflow-simulator-emulator-launcher/blob/main/LICENSE).
