@@ -8,7 +8,8 @@ You can install this workflow [here](https://github.com/yamatatsu10969/alfred-wo
 
 ## Setup
 
-Enter the path to the emulator executable in the `emulator_path` variable.
+Enter the path to the emulator executable in the `emulator_path` variable. You don't need to enter `simulator_path` for iOS.
+
 You can find the path to the emulator executable by running the following command:
 
 ```bash
