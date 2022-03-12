@@ -28,15 +28,6 @@ Enter `simulator` or `emulator` in the search field.
 
 ![CleanShot 2022-03-11 at 19 15 07](https://user-images.githubusercontent.com/43805056/157848336-0873c737-d977-487b-afe6-49206864d267.png)
 
-## Video
-
-### Simulator
-
-<https://user-images.githubusercontent.com/43805056/157847438-e0684749-2b05-44d3-bc48-82f6384a4a4d.mp4>
-
-### Emulator
-
-<https://user-images.githubusercontent.com/43805056/157847501-417effce-0b69-4702-87c2-66994d48d68b.mp4>
 
 ## License
 
