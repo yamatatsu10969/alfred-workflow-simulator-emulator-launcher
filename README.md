@@ -4,7 +4,7 @@ This is a simple workflow that launches the simulator or emulator.
 
 ## Install
 
-You can install this workflow [here](https://github.com/yamatatsu10969/alfred-workflow-simulator-emulator-launcher/releases).
+You can install this latest version workflow [here](https://github.com/yamatatsu10969/alfred-workflow-simulator-emulator-launcher/releases/download/v0.0.2/Simulator.Emulator.Launcher.alfredworkflow).
 
 ## Setup
 
@@ -16,7 +16,7 @@ You can find the path to the emulator executable by running the following comman
 where emulator
 ```
 
-https://user-images.githubusercontent.com/43805056/157849686-4210597d-bbbd-4973-a3a3-23153cfcf85c.mp4
+<https://user-images.githubusercontent.com/43805056/157849686-4210597d-bbbd-4973-a3a3-23153cfcf85c.mp4>
 
 ## Usage
 
@@ -30,12 +30,11 @@ Enter `simulator` or `emulator` in the search field.
 
 ### Simulator
 
-https://user-images.githubusercontent.com/43805056/157847438-e0684749-2b05-44d3-bc48-82f6384a4a4d.mp4
+<https://user-images.githubusercontent.com/43805056/157847438-e0684749-2b05-44d3-bc48-82f6384a4a4d.mp4>
 
 ### Emulator
 
-https://user-images.githubusercontent.com/43805056/157847501-417effce-0b69-4702-87c2-66994d48d68b.mp4
-
+<https://user-images.githubusercontent.com/43805056/157847501-417effce-0b69-4702-87c2-66994d48d68b.mp4>
 
 ## License
 
