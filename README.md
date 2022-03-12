@@ -2,6 +2,10 @@
 
 This is a simple workflow that launches the simulator or emulator.
 
+## Install
+
+You can install this workflow [here](https://github.com/yamatatsu10969/alfred-workflow-simulator-emulator-launcher/releases).
+
 ## Setup
 
 Enter the path to the emulator executable in the `emulator_path` variable.
