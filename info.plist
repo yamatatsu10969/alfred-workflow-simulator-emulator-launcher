@@ -239,9 +239,11 @@ ${emulator_path} -avd $query</string>
 		<string>/Users/tatsuyayamamoto/Library/Android/sdk/emulator/emulator</string>
 	</dict>
 	<key>variablesdontexport</key>
-	<array/>
+	<array>
+		<string>emulator_path</string>
+	</array>
 	<key>version</key>
-	<string></string>
+	<string>v0.0.2</string>
 	<key>webaddress</key>
 	<string>https://twitter.com/yamatatsu109_ja</string>
 </dict>
