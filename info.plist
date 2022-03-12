@@ -126,33 +126,6 @@ open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/</str
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-echo -n $query
-
-${emulator_path} -avd $query</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -199,6 +172,33 @@ ${emulator_path} -avd $query</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+${emulator_path} -avd $query</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -243,7 +243,7 @@ ${emulator_path} -avd $query</string>
 		<string>emulator_path</string>
 	</array>
 	<key>version</key>
-	<string>v0.0.2</string>
+	<string>v1.0.0</string>
 	<key>webaddress</key>
 	<string>https://twitter.com/yamatatsu109_ja</string>
 </dict>
