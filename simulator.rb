@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require 'json'
+require_relative 'script_filter_item'
 
+# iOS Simulator
 class Simulator
   attr_accessor :name, :udid
 
@@ -10,15 +11,11 @@ class Simulator
     @udid = args[:udid]
   end
 
-  def to_json(*)
-    {
-      type: 'file',
-      title: @name,
-      subtitle: '',
-      arg: @udid,
-      icon: {
-        path: 'simulator.png'
-      }
-    }.to_json
+  def to_script_filter_item
+    ScriptFilterItem.new(
+      { arg: @udid,
+        title: @name,
+        icon_path: 'assets/simulator.png' }
+    )
   end
 end
