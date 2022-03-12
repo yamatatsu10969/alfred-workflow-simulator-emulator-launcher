@@ -2,6 +2,8 @@
 
 This is a simple workflow that launches the simulator or emulator.
 
+![CleanShot 2022-03-12 at 13 40 37](https://user-images.githubusercontent.com/43805056/158003942-136a36df-3092-434d-ba09-adc0d98d3ee9.gif)
+
 ## Install
 
 You can install this latest version workflow [here](https://github.com/yamatatsu10969/alfred-workflow-simulator-emulator-launcher/releases/download/v1.0.0/Simulator.Emulator.Launcher.alfredworkflow).
