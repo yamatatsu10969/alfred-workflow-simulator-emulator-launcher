@@ -3,6 +3,7 @@
 require 'json'
 require_relative 'simulator'
 
+# iOS Simulator Workflow
 class SimulatorWorkflow
   def self.device_list
     cmd_output = `xcrun simctl list -j devices`
