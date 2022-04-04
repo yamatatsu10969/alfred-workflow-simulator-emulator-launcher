@@ -14,7 +14,7 @@ class SimulatorWorkflow
   def self.create_script_filter_items(devices)
     ios_simulator_keys = devices.keys.select { |key| key.to_s.include?('iOS') }
     ios_simulators = []
-    ios_simulator_keys.reverse_each do |key|
+    ios_simulator_keys.each do |key|
       devices[key].each do |device|
         next unless device[:isAvailable] == true
 
