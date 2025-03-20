@@ -9,13 +9,29 @@ class Simulator
   def initialize(args = {})
     @name = args[:name]
     @udid = args[:udid]
+
+    # Create a debug log to track object creation
+    log_file = '/tmp/alfred_simulator_objects.log'
+    File.write(log_file, "Created Simulator: name=#{@name}, udid=#{@udid}\n", mode: 'a')
   end
 
   def to_script_filter_item
-    ScriptFilterItem.new(
+    # Create a debug log to track conversion
+    log_file = '/tmp/alfred_simulator_objects.log'
+    File.write(log_file, "Converting to ScriptFilterItem: #{@name}, #{@udid}\n", mode: 'a')
+
+    item = ScriptFilterItem.new(
       { arg: @udid,
         title: @name,
         icon_path: 'assets/simulator.png' }
     )
+
+    File.write(log_file, "Created ScriptFilterItem: #{item.inspect}\n", mode: 'a')
+    item
+  end
+
+  # For inspection
+  def inspect
+    "#<Simulator name=#{@name} udid=#{@udid}>"
   end
 end
