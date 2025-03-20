@@ -4,7 +4,7 @@ require 'json'
 
 # Item shown in the script filter
 class ScriptFilterItem
-  attr_reader :uid, :title, :subtitle, :arg, :icon_path, :mods
+  attr_reader :uid, :title, :arg, :icon_path, :mods
 
   def initialize(options = {})
     @uid = options[:uid]
@@ -19,7 +19,7 @@ class ScriptFilterItem
     {
       type: 'file',
       title: @title,
-      subtitle: @subtitle,
+      subtitle: @subtitle || '',
       arg: @arg,
       icon: {
         path: @icon_path

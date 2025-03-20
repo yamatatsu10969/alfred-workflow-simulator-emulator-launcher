@@ -13,9 +13,11 @@ class Simulator
 
   def to_script_filter_item
     ScriptFilterItem.new(
-      { arg: @udid,
+      {
+        arg: @udid,
         title: @name,
-        icon_path: 'assets/simulator.png' }
+        icon_path: 'assets/simulator.png'
+      }
     )
   end
 end
