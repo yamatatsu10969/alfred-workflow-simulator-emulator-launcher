@@ -53,7 +53,7 @@
 					<key>escaping</key>
 					<integer>102</integer>
 					<key>script</key>
-					<string>/usr/bin/ruby simulator_run.rb "$1"</string>
+					<string>/usr/bin/ruby simulator_main.rb "$1"</string>
 					<key>scriptargtype</key>
 					<integer>1</integer>
 					<key>scriptfile</key>
@@ -125,7 +125,7 @@
 					<key>escaping</key>
 					<integer>102</integer>
 					<key>script</key>
-					<string>/usr/bin/ruby emulator_run.rb "$1" -p ${emulator_path}</string>
+					<string>/usr/bin/ruby emulator_main.rb "$1"</string>
 					<key>scriptargtype</key>
 					<integer>1</integer>
 					<key>scriptfile</key>
@@ -235,7 +235,7 @@
 			<string>emulator_path</string>
 		</array>
 		<key>version</key>
-		<string>v1.0.1</string>
+		<string>2.0.0</string>
 		<key>webaddress</key>
 		<string>https://twitter.com/yamatatsu109_ja</string>
 	</dict>
