@@ -53,7 +53,8 @@
 					<key>escaping</key>
 					<integer>102</integer>
 					<key>script</key>
-					<string>/usr/bin/ruby simulator_main.rb "$1"</string>
+					<string>query=$1 echo -n $query xcrun simctl boot $query open
+						/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/</string>
 					<key>scriptargtype</key>
 					<integer>1</integer>
 					<key>scriptfile</key>
@@ -120,29 +121,6 @@
 			<dict>
 				<key>config</key>
 				<dict>
-					<key>concurrently</key>
-					<false />
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>script</key>
-					<string>/usr/bin/ruby emulator_main.rb "$1"</string>
-					<key>scriptargtype</key>
-					<integer>1</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>type</key>
-					<integer>0</integer>
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.action.script</string>
-				<key>uid</key>
-				<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
-				<key>version</key>
-				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
 					<key>alfredfiltersresults</key>
 					<false />
 					<key>alfredfiltersresultsmatchmode</key>
@@ -189,6 +167,30 @@
 				<key>version</key>
 				<integer>3</integer>
 			</dict>
+			<dict>
+				<key>config</key>
+				<dict>
+					<key>concurrently</key>
+					<false />
+					<key>escaping</key>
+					<integer>102</integer>
+					<key>script</key>
+					<string>query=$1 echo -n $query nohup ${emulator_path} -avd $query &gt; /dev/null
+						2&gt;&amp;1 &amp;</string>
+					<key>scriptargtype</key>
+					<integer>1</integer>
+					<key>scriptfile</key>
+					<string></string>
+					<key>type</key>
+					<integer>0</integer>
+				</dict>
+				<key>type</key>
+				<string>alfred.workflow.action.script</string>
+				<key>uid</key>
+				<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
+				<key>version</key>
+				<integer>2</integer>
+			</dict>
 		</array>
 		<key>readme</key>
 		<string></string>
@@ -204,7 +206,7 @@
 			<key>67E45CCF-29CB-409F-A209-09BCC9818C9E</key>
 			<dict>
 				<key>xpos</key>
-				<real>455</real>
+				<real>460</real>
 				<key>ypos</key>
 				<real>425</real>
 			</dict>
