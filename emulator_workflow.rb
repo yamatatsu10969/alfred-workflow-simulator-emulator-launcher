@@ -3,6 +3,7 @@
 require 'json'
 require 'optparse'
 require_relative 'emulator'
+require_relative 'device_history'
 
 # Android Emulator Workflow
 class EmulatorWorkflow
@@ -17,15 +18,29 @@ class EmulatorWorkflow
   end
 
   def self.create_script_filter_items(devices)
-    devices.map do |name|
+    items = devices.map do |name|
       Emulator.new({ name: name }).to_script_filter_item
+    end
+
+    begin
+      # Sort by history using DeviceHistory class
+      DeviceHistory.sort_by_history(items, 'emulator')
+    rescue => e
+      # Return unsorted items as fallback
+      items
     end
   end
 
   def self.show_emulators
+    items = create_script_filter_items(device_list)
+
+    # Convert ScriptFilterItem objects to JSON objects
+    item_hashes = items.map { |item| JSON.parse(item.to_json) }
+
     export_json = {
-      'items' => create_script_filter_items(device_list)
+      'items' => item_hashes
     }.to_json
+
     puts export_json
   end
 

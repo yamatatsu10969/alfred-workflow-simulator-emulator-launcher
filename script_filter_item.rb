@@ -4,23 +4,31 @@ require 'json'
 
 # Item shown in the script filter
 class ScriptFilterItem
-  attr_accessor :title, :arg, :icon_path
+  attr_reader :uid, :title, :arg, :icon_path, :mods
 
-  def initialize(args = {})
-    @title = args[:title]
-    @arg = args[:arg]
-    @icon_path = args[:icon_path]
+  def initialize(options = {})
+    @uid = options[:uid]
+    @title = options[:title]
+    @subtitle = options[:subtitle]
+    @arg = options[:arg]
+    @icon_path = options[:icon_path]
+    @mods = options[:mods] || {}
   end
 
   def to_json(*)
     {
       type: 'file',
-      title: title,
-      subtitle: '',
-      arg: arg,
+      title: @title,
+      subtitle: @subtitle || '',
+      arg: @arg,
       icon: {
-        path: icon_path
+        path: @icon_path
       }
     }.to_json
+  end
+
+  # For inspection
+  def inspect
+    "#<ScriptFilterItem title='#{title}' arg='#{arg}'>"
   end
 end

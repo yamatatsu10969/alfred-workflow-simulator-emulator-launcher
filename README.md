@@ -28,6 +28,14 @@ Enter `simulator` or `emulator` in the search field.
 
 ![CleanShot 2022-03-11 at 19 15 07](https://user-images.githubusercontent.com/43805056/157848336-0873c737-d977-487b-afe6-49206864d267.png)
 
+## Features
+
+### Recently Used Devices
+The workflow now shows recently used devices at the top of the list. This makes it easier to quickly access your most frequently used simulators and emulators.
+
+- A simple history mechanism tracks which devices you've used
+- Devices are automatically sorted based on recent usage
+- History is stored in a small JSON file in your home directory (`~/.alfred_device_history.json`)
 
 ## License
 
