@@ -51,8 +51,8 @@ class SimulatorWorkflow
     begin
       items = create_script_filter_items(device_list)
 
-      # Convert ScriptFilterItem objects to hashes
-      item_hashes = items.map(&:to_h)
+      # Convert ScriptFilterItem objects to JSON objects
+      item_hashes = items.map { |item| JSON.parse(item.to_json) }
 
       export_json = {
         'items' => item_hashes
