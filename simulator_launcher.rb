@@ -3,26 +3,24 @@
 require_relative 'device_history'
 
 def main
-
-  # Get the device ID from the command line argument
-  device_id = ARGV[0]
+  # Get the simulator UDID from the command line argument
+  simulator_udid = ARGV[0]
 
   begin
     # Update history
-    result = DeviceHistory.update_device(device_id, 'simulator')
-
+    DeviceHistory.update_device(simulator_udid, 'simulator')
 
     # Launch the simulator
-    system("xcrun simctl boot #{device_id}")
+    system("xcrun simctl boot \"#{simulator_udid}\"")
     system("open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/")
 
-    # Return the device ID for Alfred
-    puts device_id
+    # Return the simulator UDID for Alfred
+    puts simulator_udid
   rescue => e
     # Log any errors
     puts "ERROR: #{e.class}: #{e.message}"
-    # Still try to return the device ID for Alfred
-    puts device_id
+    # Still try to return the simulator UDID for Alfred
+    puts simulator_udid
   end
 end
 
