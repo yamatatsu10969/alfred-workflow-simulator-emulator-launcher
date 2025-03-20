@@ -1,244 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.yamatatsu-tech.simulator-emulator-launcher-workflow</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
 	<dict>
-		<key>bundleid</key>
-		<string>com.yamatatsu-tech.simulator-emulator-launcher-workflow</string>
-		<key>category</key>
-		<string>Tools</string>
-		<key>connections</key>
-		<dict>
-			<key>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</key>
-			<array>
-				<dict>
-					<key>destinationuid</key>
-					<string>67E45CCF-29CB-409F-A209-09BCC9818C9E</string>
-					<key>modifiers</key>
-					<integer>0</integer>
-					<key>modifiersubtext</key>
-					<string></string>
-					<key>vitoclose</key>
-					<false />
-				</dict>
-			</array>
-			<key>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</key>
-			<array>
-				<dict>
-					<key>destinationuid</key>
-					<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
-					<key>modifiers</key>
-					<integer>0</integer>
-					<key>modifiersubtext</key>
-					<string></string>
-					<key>vitoclose</key>
-					<false />
-				</dict>
-			</array>
-		</dict>
-		<key>createdby</key>
-		<string>yamatatsu</string>
-		<key>description</key>
-		<string></string>
-		<key>disabled</key>
-		<false />
-		<key>name</key>
-		<string>Simulator Emulator Launcher</string>
-		<key>objects</key>
+		<key>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</key>
 		<array>
 			<dict>
-				<key>config</key>
-				<dict>
-					<key>concurrently</key>
-					<false />
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>script</key>
-					<string>query=$1 echo -n $query xcrun simctl boot $query open
-						/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/</string>
-					<key>scriptargtype</key>
-					<integer>1</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>type</key>
-					<integer>0</integer>
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.action.script</string>
-				<key>uid</key>
+				<key>destinationuid</key>
 				<string>67E45CCF-29CB-409F-A209-09BCC9818C9E</string>
-				<key>version</key>
-				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
-					<key>alfredfiltersresults</key>
-					<false />
-					<key>alfredfiltersresultsmatchmode</key>
-					<integer>0</integer>
-					<key>argumenttreatemptyqueryasnil</key>
-					<true />
-					<key>argumenttrimmode</key>
-					<integer>0</integer>
-					<key>argumenttype</key>
-					<integer>1</integer>
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>keyword</key>
-					<string>simulator</string>
-					<key>queuedelaycustom</key>
-					<integer>3</integer>
-					<key>queuedelayimmediatelyinitially</key>
-					<true />
-					<key>queuedelaymode</key>
-					<integer>0</integer>
-					<key>queuemode</key>
-					<integer>1</integer>
-					<key>runningsubtext</key>
-					<string></string>
-					<key>script</key>
-					<string>/usr/bin/ruby simulator_main.rb</string>
-					<key>scriptargtype</key>
-					<integer>1</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>subtext</key>
-					<string></string>
-					<key>title</key>
-					<string>simulator</string>
-					<key>type</key>
-					<integer>0</integer>
-					<key>withspace</key>
-					<true />
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.input.scriptfilter</string>
-				<key>uid</key>
-				<string>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</string>
-				<key>version</key>
-				<integer>3</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
-					<key>alfredfiltersresults</key>
-					<false />
-					<key>alfredfiltersresultsmatchmode</key>
-					<integer>0</integer>
-					<key>argumenttreatemptyqueryasnil</key>
-					<true />
-					<key>argumenttrimmode</key>
-					<integer>0</integer>
-					<key>argumenttype</key>
-					<integer>1</integer>
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>keyword</key>
-					<string>emulator</string>
-					<key>queuedelaycustom</key>
-					<integer>3</integer>
-					<key>queuedelayimmediatelyinitially</key>
-					<true />
-					<key>queuedelaymode</key>
-					<integer>0</integer>
-					<key>queuemode</key>
-					<integer>1</integer>
-					<key>runningsubtext</key>
-					<string></string>
-					<key>script</key>
-					<string>/usr/bin/ruby emulator_main.rb -p ${emulator_path}</string>
-					<key>scriptargtype</key>
-					<integer>1</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>subtext</key>
-					<string></string>
-					<key>title</key>
-					<string>emulator</string>
-					<key>type</key>
-					<integer>0</integer>
-					<key>withspace</key>
-					<true />
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.input.scriptfilter</string>
-				<key>uid</key>
-				<string>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</string>
-				<key>version</key>
-				<integer>3</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
-					<key>concurrently</key>
-					<false />
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>script</key>
-					<string>query=$1 echo -n $query nohup ${emulator_path} -avd $query &gt; /dev/null
-						2&gt;&amp;1 &amp;</string>
-					<key>scriptargtype</key>
-					<integer>1</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>type</key>
-					<integer>0</integer>
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.action.script</string>
-				<key>uid</key>
-				<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
-				<key>version</key>
-				<integer>2</integer>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>readme</key>
-		<string></string>
-		<key>uidata</key>
-		<dict>
-			<key>5A10364E-0CF1-4699-B791-87B29ED881E5</key>
-			<dict>
-				<key>xpos</key>
-				<real>460</real>
-				<key>ypos</key>
-				<real>560</real>
-			</dict>
-			<key>67E45CCF-29CB-409F-A209-09BCC9818C9E</key>
-			<dict>
-				<key>xpos</key>
-				<real>460</real>
-				<key>ypos</key>
-				<real>425</real>
-			</dict>
-			<key>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</key>
-			<dict>
-				<key>xpos</key>
-				<real>215</real>
-				<key>ypos</key>
-				<real>430</real>
-			</dict>
-			<key>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</key>
-			<dict>
-				<key>xpos</key>
-				<real>215</real>
-				<key>ypos</key>
-				<real>560</real>
-			</dict>
-		</dict>
-		<key>userconfigurationconfig</key>
-		<array />
-		<key>variables</key>
-		<dict>
-			<key>emulator_path</key>
-			<string>/Users/tatsuyayamamoto/Library/Android/sdk/emulator/emulator</string>
-		</dict>
-		<key>variablesdontexport</key>
+		<key>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</key>
 		<array>
-			<string>emulator_path</string>
+			<dict>
+				<key>destinationuid</key>
+				<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
-		<key>version</key>
-		<string>2.0.0</string>
-		<key>webaddress</key>
-		<string>https://twitter.com/yamatatsu109_ja</string>
 	</dict>
+	<key>createdby</key>
+	<string>yamatatsu</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Simulator Emulator Launcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1 
+echo -n $query 
+
+xcrun simctl boot $query 
+
+open	 /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>67E45CCF-29CB-409F-A209-09BCC9818C9E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>simulator</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/ruby simulator_main.rb</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>simulator</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>emulator</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/ruby emulator_main.rb -p ${emulator_path}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>emulator</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1 
+
+
+
+echo -n $query 
+
+
+nohup ${emulator_path} -avd $query &gt; /dev/null 2&gt;&amp;1 &amp;</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5A10364E-0CF1-4699-B791-87B29ED881E5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>5A10364E-0CF1-4699-B791-87B29ED881E5</key>
+		<dict>
+			<key>xpos</key>
+			<real>460</real>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
+		<key>67E45CCF-29CB-409F-A209-09BCC9818C9E</key>
+		<dict>
+			<key>xpos</key>
+			<real>460</real>
+			<key>ypos</key>
+			<real>425</real>
+		</dict>
+		<key>B12F32DE-8D7F-4B65-AB5B-8E5F22B68528</key>
+		<dict>
+			<key>xpos</key>
+			<real>215</real>
+			<key>ypos</key>
+			<real>430</real>
+		</dict>
+		<key>DE62BBDA-7C95-4B89-8964-C5A355CD28AE</key>
+		<dict>
+			<key>xpos</key>
+			<real>215</real>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variables</key>
+	<dict>
+		<key>emulator_path</key>
+		<string>/Users/tatsuyayamamoto/Library/Android/sdk/emulator/emulator</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>emulator_path</string>
+	</array>
+	<key>version</key>
+	<string>2.0.0</string>
+	<key>webaddress</key>
+	<string>https://twitter.com/yamatatsu109_ja</string>
+</dict>
 </plist>
